@@ -3,3 +3,6 @@ generated/
 uploads/
 __pycache__/
 *.pyc
+
+db.json
+image_uploads/
