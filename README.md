@@ -68,8 +68,8 @@ Before production use, move the Flask secret and every provider token into envir
 ## Run locally
 
 ```bash
-git clone https://github.com/nasratulnayem/autofacebookpost.git
-cd autofacebookpost
+git clone https://github.com/nasratulnayem/social-thumbnail-publisher.git
+cd social-thumbnail-publisher
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
