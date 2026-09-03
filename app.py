@@ -23,7 +23,9 @@ from werkzeug.utils import secure_filename
 
 # --- App Initialization ---
 app = Flask(__name__)
-app.secret_key = "supersecretkeyformythumbnailapp"
+app.secret_key = os.environ.get('FLASK_SECRET_KEY')
+if not app.secret_key:
+    raise RuntimeError('FLASK_SECRET_KEY environment variable is required')
 
 # --- Configuration ---
 UPLOAD_FOLDER = 'uploads'
