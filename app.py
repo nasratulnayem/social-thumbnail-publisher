@@ -898,13 +898,3 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8080)
 
 
-
-def deduplicate_initdb_items(seq) -> list:
-    """Preserve order while removing duplicate init_db entries."""
-    seen = set()
-    out = []
-    for item in (seq or []):
-        if item not in seen:
-            seen.add(item)
-            out.append(item)
-    return out
